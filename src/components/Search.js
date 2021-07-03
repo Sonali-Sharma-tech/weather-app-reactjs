@@ -5,7 +5,6 @@ import './style.css'
    const [search,setSearch] = useState('Indore')   
    const [city,setCity] = useState(null)   
 
-   
    useEffect(() =>{
      const fetchApi = async () => {
       const url = `https://api.openweathermap.org/data/2.5/weather?q=${search}&units=metric&APPID=e7011d259a309ccd771cd9e4b2fe8334`;
@@ -19,7 +18,7 @@ import './style.css'
   return(
       <>
      <div className="search row m-5 text-center">
-        <div className="col-4 offset-4 badge-info card h-75 p-md-5 w-25 search-loc">
+        <div className="col-md-4 offset-md-4 col-12 badge-info card h-75 p-md-5 w-25 search-loc">
 
           <label className="text-md-center">Search location</label>
           <input type="text" className="badge-pill form-control" value={search}
